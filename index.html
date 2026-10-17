@@ -4,29 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Batik Nusantara - Koleksi Batik Premium</title>
-    <!-- Import Font Modern -->
+    
+    <!-- Google Fonts: Playfair Display (Judul) & Poppins (Teks) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     
     <style>
+        /* ================= VARIABEL WARNA ================= */
         :root {
-            --primary: #1A2530; /* Navy Gelap */
-            --secondary: #C19B76; /* Emas/Krem Elegan */
-            --accent: #25D366; /* WhatsApp Green */
-            --bg-light: #F8F9FA;
-            --text-dark: #333333;
-            --text-muted: #6B7280;
+            --primary: #0F172A;      /* Navy Gelap (Profesional) */
+            --secondary: #C6A87C;    /* Emas/Krem (Elegan) */
+            --secondary-hover: #b09367;
+            --accent: #25D366;       /* WhatsApp Green */
+            --bg-light: #F8F9FA;     /* Background Terang */
+            --bg-white: #FFFFFF;
+            --text-dark: #1E293B;
+            --text-muted: #64748B;
+            --font-heading: 'Playfair Display', serif;
+            --font-body: 'Poppins', sans-serif;
         }
 
+        /* ================= RESET & BASE ================= */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
-            font-family: 'Poppins', sans-serif;
+            font-family: var(--font-body);
             line-height: 1.6;
             color: var(--text-dark);
             background-color: var(--bg-light);
@@ -34,7 +45,7 @@
         }
 
         h1, h2, h3, .logo {
-            font-family: 'Playfair Display', serif;
+            font-family: var(--font-heading);
         }
 
         .container {
@@ -43,9 +54,9 @@
             padding: 0 24px;
         }
 
-        /* NAVBAR */
+        /* ================= NAVBAR ================= */
         nav {
-            background: rgba(255, 255, 255, 0.95);
+            background: rgba(255, 255, 255, 0.98);
             backdrop-filter: blur(10px);
             padding: 20px 0;
             position: sticky;
@@ -61,10 +72,11 @@
         }
 
         nav .logo {
-            font-size: 28px;
+            font-size: 26px;
             font-weight: 700;
             color: var(--primary);
             letter-spacing: 0.5px;
+            text-decoration: none;
         }
 
         nav ul {
@@ -85,10 +97,11 @@
             color: var(--secondary);
         }
 
-        /* HERO SECTION */
+        /* ================= HERO SECTION ================= */
         .hero {
             background-color: var(--primary);
-            background-image: linear-gradient(rgba(26, 37, 48, 0.85), rgba(26, 37, 48, 0.85)), url('https://images.unsplash.com/photo-1600080972464-8e5f35f63d08?q=80&w=1920&auto=format&fit=crop');
+            /* Menggunakan gambar kain batik asli dari Unsplash sebagai background */
+            background-image: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.85)), url('https://images.unsplash.com/photo-1600080972464-8e5f35f63d08?q=80&w=1920&auto=format&fit=crop');
             background-size: cover;
             background-position: center;
             color: white;
@@ -97,7 +110,7 @@
         }
 
         .hero h1 {
-            font-size: 52px;
+            font-size: 54px;
             margin-bottom: 24px;
             line-height: 1.2;
             color: #ffffff;
@@ -107,7 +120,7 @@
             font-size: 18px;
             margin-bottom: 40px;
             font-weight: 300;
-            max-width: 600px;
+            max-width: 650px;
             margin-left: auto;
             margin-right: auto;
             opacity: 0.9;
@@ -118,7 +131,7 @@
             background: var(--secondary);
             color: white;
             padding: 16px 40px;
-            border-radius: 4px; /* Lebih tegas/kotak modern */
+            border-radius: 4px;
             text-decoration: none;
             font-size: 16px;
             font-weight: 600;
@@ -130,15 +143,15 @@
         }
 
         .btn-primary:hover {
-            background: #a8825e;
+            background: var(--secondary-hover);
             transform: translateY(-2px);
-            box-shadow: 0 10px 20px rgba(193, 155, 118, 0.3);
+            box-shadow: 0 10px 20px rgba(198, 168, 124, 0.3);
         }
 
-        /* TRUST BADGES */
+        /* ================= TRUST BAR ================= */
         .trust-bar {
-            background: white;
-            padding: 30px 0;
+            background: var(--bg-white);
+            padding: 25px 0;
             border-bottom: 1px solid rgba(0,0,0,0.05);
         }
 
@@ -159,7 +172,7 @@
             color: var(--text-muted);
         }
 
-        /* KOLEKSI SECTION */
+        /* ================= KOLEKSI SECTION ================= */
         section {
             padding: 100px 0;
         }
@@ -188,7 +201,7 @@
         }
 
         .produk-card {
-            background: white;
+            background: var(--bg-white);
             border-radius: 12px;
             overflow: hidden;
             box-shadow: 0 10px 30px rgba(0,0,0,0.05);
@@ -202,7 +215,7 @@
 
         .produk-image {
             width: 100%;
-            height: 350px;
+            height: 380px;
             position: relative;
             overflow: hidden;
             background-color: #eee;
@@ -240,7 +253,7 @@
         }
 
         .produk-info h3 {
-            font-size: 20px;
+            font-size: 22px;
             margin-bottom: 8px;
             color: var(--primary);
         }
@@ -274,10 +287,10 @@
         }
 
         .btn-order:hover {
-            background: #0d141a;
+            background: #0b111e;
         }
 
-        /* CTA SECTION */
+        /* ================= CTA SECTION ================= */
         .cta-section {
             background: var(--secondary);
             color: white;
@@ -301,19 +314,19 @@
         }
 
         .cta-section .btn-primary:hover {
-            background: #0d141a;
+            background: #0b111e;
         }
 
-        /* FOOTER */
+        /* ================= FOOTER ================= */
         footer {
             background: var(--primary);
-            color: #a0a0a0;
+            color: #94A3B8;
             padding: 40px 20px;
             text-align: center;
             font-size: 14px;
         }
 
-        /* FLOATING WHATSAPP */
+        /* ================= FLOATING WHATSAPP ================= */
         .float-wa {
             position: fixed;
             bottom: 30px;
@@ -337,13 +350,13 @@
             transform: scale(1.1) rotate(10deg);
         }
 
-        /* RESPONSIVE */
+        /* ================= RESPONSIVE ================= */
         @media (max-width: 768px) {
             nav ul { display: none; }
             .hero h1 { font-size: 36px; }
             .section-title { font-size: 32px; }
             .trust-grid { flex-direction: column; align-items: center; gap: 15px; }
-            .produk-image { height: 280px; }
+            .produk-image { height: 300px; }
         }
     </style>
 </head>
@@ -352,17 +365,18 @@
     <!-- NAVBAR -->
     <nav>
         <div class="container">
-            <div class="logo">Batik Nusantara</div>
+            <a href="#" class="logo">Batik Nusantara</a>
             <ul>
                 <li><a href="#koleksi">Koleksi</a></li>
                 <li><a href="#tentang">Tentang Kami</a></li>
                 <li><a href="#faq">FAQ</a></li>
             </ul>
+            <!-- Ganti 6281234567890 dengan nomor WA Anda -->
             <a href="https://wa.me/6281234567890" class="btn-order" style="width: auto; padding: 10px 24px; border-radius: 50px;">Hubungi Kami</a>
         </div>
     </nav>
 
-    <!-- HERO -->
+    <!-- HERO SECTION -->
     <section class="hero">
         <div class="container">
             <h1>Warisan Budaya dalam Balutan Modernitas</h1>
@@ -382,7 +396,7 @@
         </div>
     </div>
 
-    <!-- KOLEKSI -->
+    <!-- KOLEKSI SECTION -->
     <section id="koleksi">
         <div class="container">
             <div class="section-header">
@@ -392,45 +406,43 @@
             
             <div class="produk-grid">
                 
-                <!-- PRODUK 1 -->
+                <!-- PRODUK 1 (Gambar Real HD: Kemeja Batik) -->
                 <div class="produk-card">
                     <div class="produk-image">
-                        <!-- Gambar HD dari Unsplash (Batik Pria) -->
                         <img src="https://images.unsplash.com/photo-1596808228872-19583e808f22?q=80&w=800&auto=format&fit=crop" alt="Kemeja Batik Pria">
                         <span class="badge">Best Seller</span>
                     </div>
                     <div class="produk-info">
                         <h3>Kemeja Batik Pria</h3>
                         <div class="produk-price">Rp 250.000 <span class="coret">Rp 350.000</span></div>
-                        <a href="https://wa.me/6281234567890?text=Order%20Kemeja%20Batik%20Pria" class="btn-order">Beli Sekarang</a>
+                        <!-- Ganti teks setelah ?text= untuk pesan otomatis -->
+                        <a href="https://wa.me/6281234567890?text=Halo,%20saya%20mau%20order%20Kemeja%20Batik%20Pria" class="btn-order">Beli Sekarang</a>
                     </div>
                 </div>
 
-                <!-- PRODUK 2 -->
+                <!-- PRODUK 2 (Gambar Real HD: Dress Batik Wanita) -->
                 <div class="produk-card">
                     <div class="produk-image">
-                        <!-- Gambar HD dari Unsplash (Batik Wanita) -->
                         <img src="https://images.unsplash.com/photo-1613489022437-41b686f2cc53?q=80&w=800&auto=format&fit=crop" alt="Dress Batik Wanita">
                         <span class="badge">Koleksi Baru</span>
                     </div>
                     <div class="produk-info">
                         <h3>Dress Batik Wanita</h3>
                         <div class="produk-price">Rp 350.000 <span class="coret">Rp 450.000</span></div>
-                        <a href="https://wa.me/6281234567890?text=Order%20Dress%20Batik%20Wanita" class="btn-order">Beli Sekarang</a>
+                        <a href="https://wa.me/6281234567890?text=Halo,%20saya%20mau%20order%20Dress%20Batik%20Wanita" class="btn-order">Beli Sekarang</a>
                     </div>
                 </div>
 
-                <!-- PRODUK 3 -->
+                <!-- PRODUK 3 (Gambar Real HD: Kain Batik) -->
                 <div class="produk-card">
                     <div class="produk-image">
-                        <!-- Gambar HD dari Unsplash (Kain Batik) -->
                         <img src="https://images.unsplash.com/photo-1600080972464-8e5f35f63d08?q=80&w=800&auto=format&fit=crop" alt="Kain Batik Tulis">
                         <span class="badge">Premium</span>
                     </div>
                     <div class="produk-info">
                         <h3>Kain Batik Tulis</h3>
                         <div class="produk-price">Rp 750.000</div>
-                        <a href="https://wa.me/6281234567890?text=Order%20Kain%20Batik%20Tulis" class="btn-order">Beli Sekarang</a>
+                        <a href="https://wa.me/6281234567890?text=Halo,%20saya%20mau%20order%20Kain%20Batik%20Tulis" class="btn-order">Beli Sekarang</a>
                     </div>
                 </div>
 
@@ -438,7 +450,7 @@
         </div>
     </section>
 
-    <!-- CTA -->
+    <!-- CTA SECTION -->
     <section class="cta-section">
         <div class="container">
             <h2>Dapatkan Penawaran Spesial Hari Ini</h2>
@@ -450,11 +462,11 @@
     <!-- FOOTER -->
     <footer>
         <div class="container">
-            <p>&copy; 2024 Batik Nusantara. All rights reserved.</p>
+            <p>&copy; 2026 Batik Nusantara. All rights reserved.</p>
         </div>
     </footer>
 
-    <!-- FLOATING WA -->
+    <!-- FLOATING WHATSAPP -->
     <a href="https://wa.me/6281234567890" class="float-wa" title="Hubungi Kami">💬</a>
 
 </body>
