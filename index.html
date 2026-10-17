@@ -241,10 +241,12 @@
             
             <div class="produk-grid">
                 
-                <!-- PRODUK 1 (Menggunakan gambar dari folder img) -->
+                <!-- PRODUK 1 (Lokal img/dressbatik.jpg, Fallback ke Pexels) -->
                 <div class="produk-card">
                     <div class="produk-image">
-                        <img src="img/dressbatik.jpg" alt="Dress Batik Modern">
+                        <img src="img/dressbatik.jpg" 
+                             onerror="this.onerror=null; this.src='https://images.pexels.com/photos/7319302/pexels-photo-7319302.jpeg?auto=compress&cs=tinysrgb&w=800';" 
+                             alt="Dress Batik Modern">
                         <span class="badge">Best Seller</span>
                     </div>
                     <div class="produk-info">
@@ -254,10 +256,12 @@
                     </div>
                 </div>
 
-                <!-- PRODUK 2 (Menggunakan gambar dari folder img) -->
+                <!-- PRODUK 2 (Lokal img/kemejabatikcasual.jpg, Fallback ke Pexels) -->
                 <div class="produk-card">
                     <div class="produk-image">
-                        <img src="img/kemejabatikcasual.jpg" alt="Kemeja Batik Wanita">
+                        <img src="img/kemejabatikcasual.jpg" 
+                             onerror="this.onerror=null; this.src='https://images.pexels.com/photos/7148364/pexels-photo-7148364.jpeg?auto=compress&cs=tinysrgb&w=800';" 
+                             alt="Kemeja Batik Wanita">
                         <span class="badge">New Arrival</span>
                     </div>
                     <div class="produk-info">
@@ -267,10 +271,12 @@
                     </div>
                 </div>
 
-                <!-- PRODUK 3 (Menggunakan gambar dari folder img) -->
+                <!-- PRODUK 3 (Lokal img/kainbatik.jpg, Fallback ke Pexels) -->
                 <div class="produk-card">
                     <div class="produk-image">
-                        <img src="img/kainbatik.jpg" alt="Kain Batik Premium">
+                        <img src="img/kainbatik.jpg" 
+                             onerror="this.onerror=null; this.src='https://images.pexels.com/photos/4210867/pexels-photo-4210867.jpeg?auto=compress&cs=tinysrgb&w=800';" 
+                             alt="Kain Batik Premium">
                         <span class="badge">Premium</span>
                     </div>
                     <div class="produk-info">
@@ -302,7 +308,7 @@
                 </svg>
                 <span class="logo-text">Batik Ayu</span>
             </div>
-            <p>&copy; 2026 Batik Ayu. All rights reserved.</p>
+            <p>&copy; 2024 Batik Ayu. All rights reserved.</p>
         </div>
     </footer>
 
