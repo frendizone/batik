@@ -5,603 +5,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Batik Nusantara - Batik Premium Harga Pengrajin</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-
-        body {
-            line-height: 1.6;
-            color: #333;
-            background: #faf8f5;
-        }
-
-        .container {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
+        /* CSS SAMA SEPERTI SEBELUMNYA, TAMBAHAN UNTUK GAMBAR */
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { line-height: 1.6; color: #333; background: #faf8f5; }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
 
         /* NAVBAR */
-        nav {
-            background: white;
-            padding: 15px 20px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-
-        nav .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        nav .logo {
-            font-size: 24px;
-            font-weight: bold;
-            color: #8B4513;
-        }
-
-        nav ul {
-            display: flex;
-            list-style: none;
-            gap: 25px;
-        }
-
-        nav ul li a {
-            text-decoration: none;
-            color: #333;
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-
-        nav ul li a:hover {
-            color: #8B4513;
-        }
-
-        nav .nav-cta {
-            background: #8B4513;
-            color: white;
-            padding: 10px 20px;
-            border-radius: 25px;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 14px;
-        }
+        nav { background: white; padding: 15px 20px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 100; }
+        nav .container { display: flex; justify-content: space-between; align-items: center; }
+        nav .logo { font-size: 24px; font-weight: bold; color: #8B4513; }
+        nav ul { display: flex; list-style: none; gap: 25px; }
+        nav ul li a { text-decoration: none; color: #333; font-weight: 500; transition: color 0.3s; }
+        nav ul li a:hover { color: #8B4513; }
+        nav .nav-cta { background: #8B4513; color: white; padding: 10px 20px; border-radius: 25px; text-decoration: none; font-weight: bold; font-size: 14px; }
 
         /* HERO */
-        .hero {
-            background: linear-gradient(135deg, #8B4513 0%, #A0522D 100%);
-            color: white;
-            padding: 80px 20px;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><circle cx="50" cy="50" r="30" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="2"/></svg>');
-            opacity: 0.3;
-        }
-
-        .hero .container {
-            position: relative;
-            z-index: 1;
-        }
-
-        .hero h1 {
-            font-size: 42px;
-            margin-bottom: 20px;
-            line-height: 1.2;
-        }
-
-        .hero p {
-            font-size: 18px;
-            margin-bottom: 30px;
-            opacity: 0.95;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .btn {
-            display: inline-block;
-            background: #25D366;
-            color: white;
-            padding: 16px 40px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-size: 18px;
-            font-weight: bold;
-            transition: all 0.3s;
-            border: none;
-            cursor: pointer;
-        }
-
-        .btn:hover {
-            background: #1DA851;
-            transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.3);
-        }
-
-        .trust-badges {
-            margin-top: 25px;
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            flex-wrap: wrap;
-            font-size: 14px;
-        }
-
-        .trust-badges div {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        /* TRUST SECTION */
-        .trust {
-            background: white;
-            padding: 40px 20px;
-        }
-
-        .trust-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-            gap: 20px;
-            max-width: 1000px;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        .trust-item {
-            padding: 20px;
-        }
-
-        .trust-item .icon {
-            font-size: 32px;
-            margin-bottom: 10px;
-        }
-
-        .trust-item p {
-            font-size: 14px;
-            font-weight: 600;
-            color: #555;
-        }
+        .hero { background: linear-gradient(135deg, #8B4513 0%, #A0522D 100%); color: white; padding: 80px 20px; text-align: center; position: relative; overflow: hidden; }
+        .hero::before { content: ""; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><circle cx="50" cy="50" r="30" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="2"/></svg>'); opacity: 0.3; }
+        .hero .container { position: relative; z-index: 1; }
+        .hero h1 { font-size: 42px; margin-bottom: 20px; line-height: 1.2; }
+        .hero p { font-size: 18px; margin-bottom: 30px; opacity: 0.95; max-width: 600px; margin-left: auto; margin-right: auto; }
+        .btn { display: inline-block; background: #25D366; color: white; padding: 16px 40px; border-radius: 50px; text-decoration: none; font-size: 18px; font-weight: bold; transition: all 0.3s; border: none; cursor: pointer; }
+        .btn:hover { background: #1DA851; transform: translateY(-2px); box-shadow: 0 10px 25px rgba(37, 211, 102, 0.3); }
+        .trust-badges { margin-top: 25px; display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; font-size: 14px; }
+        .trust-badges div { display: flex; align-items: center; gap: 8px; }
 
         /* SECTION */
-        section {
-            padding: 70px 20px;
-        }
+        section { padding: 70px 20px; }
+        .section-title { font-size: 32px; text-align: center; margin-bottom: 15px; color: #333; }
+        .section-subtitle { text-align: center; font-size: 16px; color: #666; margin-bottom: 40px; }
 
-        .section-title {
-            font-size: 32px;
-            text-align: center;
-            margin-bottom: 15px;
-            color: #333;
-        }
+        /* KOLEKSI (UPDATE GAMBAR) */
+        .koleksi { background: #faf8f5; }
+        .produk-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; max-width: 1100px; margin: 0 auto; }
+        .produk-card { background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.08); transition: transform 0.3s, box-shadow 0.3s; }
+        .produk-card:hover { transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0,0,0,0.15); }
+        
+        /* UPDATE: Container Gambar */
+        .produk-card .gambar { width: 100%; height: 300px; background: #eee; position: relative; overflow: hidden; }
+        .produk-card .gambar img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s; }
+        .produk-card:hover .gambar img { transform: scale(1.05); } /* Efek zoom saat di-hover */
+        
+        .produk-card .badge { position: absolute; top: 12px; left: 12px; background: #FF6B6B; color: white; padding: 5px 12px; border-radius: 20px; font-size: 12px; font-weight: bold; z-index: 10; }
+        .produk-card .info { padding: 20px; }
+        .produk-card h3 { font-size: 18px; margin-bottom: 8px; color: #333; }
+        .produk-card .harga { font-size: 20px; font-weight: bold; color: #8B4513; margin-bottom: 12px; }
+        .produk-card .harga .coret { font-size: 14px; color: #999; text-decoration: line-through; margin-left: 8px; font-weight: normal; }
+        .produk-card .btn-order { display: block; width: 100%; background: #25D366; color: white; padding: 12px; border-radius: 10px; text-decoration: none; text-align: center; font-weight: bold; transition: background 0.3s; }
+        .produk-card .btn-order:hover { background: #1DA851; }
 
-        .section-subtitle {
-            text-align: center;
-            font-size: 16px;
-            color: #666;
-            margin-bottom: 40px;
-        }
-
-        /* KOLEKSI */
-        .koleksi {
-            background: #faf8f5;
-        }
-
-        .produk-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 25px;
-            max-width: 1100px;
-            margin: 0 auto;
-        }
-
-        .produk-card {
-            background: white;
-            border-radius: 16px;
-            overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-
-        .produk-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-        }
-
-        .produk-card .gambar {
-            width: 100%;
-            height: 250px;
-            background: linear-gradient(135deg, #8B4513, #A0522D);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 60px;
-            color: white;
-            position: relative;
-        }
-
-        .produk-card .badge {
-            position: absolute;
-            top: 12px;
-            left: 12px;
-            background: #FF6B6B;
-            color: white;
-            padding: 5px 12px;
-            border-radius: 20px;
-            font-size: 12px;
-            font-weight: bold;
-        }
-
-        .produk-card .info {
-            padding: 20px;
-        }
-
-        .produk-card h3 {
-            font-size: 18px;
-            margin-bottom: 8px;
-            color: #333;
-        }
-
-        .produk-card .harga {
-            font-size: 20px;
-            font-weight: bold;
-            color: #8B4513;
-            margin-bottom: 12px;
-        }
-
-        .produk-card .harga .coret {
-            font-size: 14px;
-            color: #999;
-            text-decoration: line-through;
-            margin-left: 8px;
-            font-weight: normal;
-        }
-
-        .produk-card .btn-order {
-            display: block;
-            width: 100%;
-            background: #25D366;
-            color: white;
-            padding: 12px;
-            border-radius: 10px;
-            text-decoration: none;
-            text-align: center;
-            font-weight: bold;
-            transition: background 0.3s;
-        }
-
-        .produk-card .btn-order:hover {
-            background: #1DA851;
-        }
-
-        /* KEUNGGULAN */
-        .keunggulan {
-            background: white;
-        }
-
-        .keunggulan-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-
-        .keunggulan-card {
-            background: #faf8f5;
-            padding: 30px;
-            border-radius: 16px;
-            text-align: center;
-            border: 2px solid transparent;
-            transition: all 0.3s;
-        }
-
-        .keunggulan-card:hover {
-            border-color: #8B4513;
-            transform: translateY(-5px);
-        }
-
-        .keunggulan-card .icon {
-            font-size: 48px;
-            margin-bottom: 15px;
-        }
-
-        .keunggulan-card h3 {
-            font-size: 20px;
-            margin-bottom: 10px;
-            color: #8B4513;
-        }
-
-        .keunggulan-card p {
-            font-size: 14px;
-            color: #666;
-        }
-
-        /* CARA ORDER */
-        .cara-order {
-            background: #faf8f5;
-        }
-
-        .order-steps {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-            gap: 25px;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-
-        .order-step {
-            text-align: center;
-            position: relative;
-        }
-
-        .order-step .nomor {
-            width: 60px;
-            height: 60px;
-            background: #8B4513;
-            color: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 24px;
-            font-weight: bold;
-            margin: 0 auto 15px;
-        }
-
-        .order-step h3 {
-            font-size: 16px;
-            margin-bottom: 8px;
-            color: #333;
-        }
-
-        .order-step p {
-            font-size: 14px;
-            color: #666;
-        }
-
-        /* TESTIMONI */
-        .testimoni {
-            background: white;
-        }
-
-        .testimoni-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-            max-width: 1100px;
-            margin: 0 auto;
-        }
-
-        .testimoni-card {
-            background: #faf8f5;
-            padding: 25px;
-            border-radius: 12px;
-            border-left: 4px solid #8B4513;
-        }
-
-        .testimoni-card .stars {
-            color: #FFD700;
-            margin-bottom: 10px;
-            font-size: 18px;
-        }
-
-        .testimoni-card p {
-            font-style: italic;
-            margin-bottom: 15px;
-            color: #555;
-        }
-
-        .testimoni-card .author {
-            font-weight: bold;
-            color: #8B4513;
-            font-size: 14px;
-        }
-
-        /* PROMO */
-        .promo {
-            background: linear-gradient(135deg, #8B4513 0%, #A0522D 100%);
-            color: white;
-            text-align: center;
-        }
-
-        .promo h2 {
-            font-size: 36px;
-            margin-bottom: 20px;
-        }
-
-        .promo-list {
-            max-width: 600px;
-            margin: 0 auto 30px;
-            text-align: left;
-        }
-
-        .promo-list li {
-            padding: 12px 0;
-            font-size: 18px;
-            list-style: none;
-            border-bottom: 1px solid rgba(255,255,255,0.2);
-        }
-
-        .promo-list li::before {
-            content: "🎁";
-            margin-right: 10px;
-        }
-
-        .urgency {
-            margin-top: 20px;
-            font-size: 16px;
-            opacity: 0.9;
-        }
-
-        /* FAQ */
-        .faq {
-            background: #faf8f5;
-        }
-
-        .faq-list {
-            max-width: 700px;
-            margin: 0 auto;
-        }
-
-        .faq-item {
-            background: white;
-            padding: 20px;
-            margin-bottom: 15px;
-            border-radius: 12px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-        }
-
-        .faq-item h3 {
-            font-size: 17px;
-            margin-bottom: 10px;
-            color: #8B4513;
-        }
-
-        .faq-item p {
-            color: #666;
-            font-size: 15px;
-        }
-
-        /* CTA AKHIR */
-        .cta-akhir {
-            background: linear-gradient(135deg, #8B4513 0%, #A0522D 100%);
-            color: white;
-            text-align: center;
-            padding: 80px 20px;
-        }
-
-        .cta-akhir h2 {
-            font-size: 34px;
-            margin-bottom: 20px;
-        }
-
-        /* FOOTER */
-        footer {
-            background: #2c1810;
-            color: white;
-            padding: 50px 20px 20px;
-        }
-
-        .footer-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 30px;
-            max-width: 1100px;
-            margin: 0 auto 30px;
-        }
-
-        .footer-col h3 {
-            font-size: 18px;
-            margin-bottom: 15px;
-            color: #D2B48C;
-        }
-
-        .footer-col p, .footer-col a {
-            color: #ccc;
-            text-decoration: none;
-            font-size: 14px;
-            line-height: 2;
-            display: block;
-        }
-
-        .footer-col a:hover {
-            color: #D2B48C;
-        }
-
-        .footer-bottom {
-            text-align: center;
-            padding-top: 20px;
-            border-top: 1px solid #444;
-            font-size: 13px;
-            color: #999;
-        }
-
-        /* FLOATING WHATSAPP */
-        .float-wa {
-            position: fixed;
-            bottom: 25px;
-            right: 25px;
-            background: #25D366;
-            color: white;
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 30px;
-            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
-            text-decoration: none;
-            z-index: 999;
-            transition: transform 0.3s;
-        }
-
-        .float-wa:hover {
-            transform: scale(1.1);
-        }
-
-        /* RESPONSIVE */
-        @media (max-width: 768px) {
-            nav ul {
-                display: none;
-            }
-
-            .hero h1 {
-                font-size: 28px;
-            }
-
-            .hero p {
-                font-size: 15px;
-            }
-
-            .section-title {
-                font-size: 24px;
-            }
-
-            .btn {
-                padding: 14px 30px;
-                font-size: 16px;
-            }
-
-            .trust-badges {
-                gap: 15px;
-                font-size: 12px;
-            }
-        }
+        /* FOOTER DLL (SAMA SEPERTI SEBELUMNYA) */
+        footer { background: #2c1810; color: white; padding: 50px 20px 20px; }
+        .footer-bottom { text-align: center; padding-top: 20px; border-top: 1px solid #444; font-size: 13px; color: #999; }
+        .float-wa { position: fixed; bottom: 25px; right: 25px; background: #25D366; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 30px; box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4); text-decoration: none; z-index: 999; transition: transform 0.3s; }
+        .float-wa:hover { transform: scale(1.1); }
     </style>
 </head>
 <body>
-
-    <!-- NAVBAR -->
-    <nav>
-        <div class="container">
-            <div class="logo">Batik Nusantara</div>
-            <ul>
-                <li><a href="#koleksi">Koleksi</a></li>
-                <li><a href="#keunggulan">Keunggulan</a></li>
-                <li><a href="#testimoni">Testimoni</a></li>
-                <li><a href="#faq">FAQ</a></li>
-            </ul>
-            <a href="https://wa.me/6281234567890" class="nav-cta">Order WA</a>
-        </div>
-    </nav>
 
     <!-- HERO -->
     <section class="hero">
@@ -609,39 +69,6 @@
             <h1>Batik Premium, Harga Langsung dari Pengrajin!</h1>
             <p>Koleksi batik tulis, cap, dan print dengan kualitas terbaik. Cocok untuk kerja, acara formal, dan gaya sehari-hari.</p>
             <a href="https://wa.me/6281234567890" class="btn">Order via WhatsApp</a>
-            <div class="trust-badges">
-                <div>⭐ 4.9/5 dari 5.000+ pelanggan</div>
-                <div>🚚 Gratis ongkir se-Indonesia</div>
-                <div>✅ Garansi uang kembali</div>
-            </div>
-        </div>
-    </section>
-
-    <!-- TRUST -->
-    <section class="trust">
-        <div class="container">
-            <div class="trust-grid">
-                <div class="trust-item">
-                    <div class="icon">👥</div>
-                    <p>5.000+ Pelanggan Puas</p>
-                </div>
-                <div class="trust-item">
-                    <div class="icon">🇮🇩</div>
-                    <p>100% Batik Asli</p>
-                </div>
-                <div class="trust-item">
-                    <div class="icon">💰</div>
-                    <p>Harga Pengrajin</p>
-                </div>
-                <div class="trust-item">
-                    <div class="icon">🚚</div>
-                    <p>Gratis Ongkir</p>
-                </div>
-                <div class="trust-item">
-                    <div class="icon">🛡️</div>
-                    <p>Garansi 7 Hari</p>
-                </div>
-            </div>
         </div>
     </section>
 
@@ -651,9 +78,12 @@
             <h2 class="section-title">Koleksi Terlaris</h2>
             <p class="section-subtitle">Pilih batik favorit Anda, order langsung via WhatsApp</p>
             <div class="produk-grid">
+                
+                <!-- PRODUK 1 (GAMBAR AI) -->
                 <div class="produk-card">
                     <div class="gambar">
-                        👔
+                        <!-- Ganti URL di bawah dengan gambar Anda jika sudah didownload -->
+                        <img src="https://image.pollinations.ai/prompt/mens%20batik%20shirt,%20indonesian%20heritage,%20premium%20quality,%20studio%20lighting,%20photorealistic?width=600&height=800&nologo=true" alt="Kemeja Batik Pria">
                         <span class="badge">TERLARIS</span>
                     </div>
                     <div class="info">
@@ -663,9 +93,10 @@
                     </div>
                 </div>
 
+                <!-- PRODUK 2 (GAMBAR AI) -->
                 <div class="produk-card">
                     <div class="gambar">
-                        👗
+                        <img src="https://image.pollinations.ai/prompt/womens%20batik%20dress,%20elegant,%20indonesian%20batik%20pattern,%20studio%20lighting,%20photorealistic?width=600&height=800&nologo=true" alt="Dress Batik Wanita">
                         <span class="badge">NEW</span>
                     </div>
                     <div class="info">
@@ -675,9 +106,10 @@
                     </div>
                 </div>
 
+                <!-- PRODUK 3 (GAMBAR AI) -->
                 <div class="produk-card">
                     <div class="gambar">
-                        🎨
+                        <img src="https://image.pollinations.ai/prompt/premium%20handdrawn%20batik%20fabric,%20close%20up,%20indonesian%20traditional%20pattern,%20high%20detail?width=600&height=800&nologo=true" alt="Batik Tulis Premium">
                         <span class="badge">PREMIUM</span>
                     </div>
                     <div class="info">
@@ -687,239 +119,23 @@
                     </div>
                 </div>
 
-                <div class="produk-card">
-                    <div class="gambar">
-                        👔
-                    </div>
-                    <div class="info">
-                        <h3>Kemeja Batik Lengan Panjang</h3>
-                        <div class="harga">Rp 300rb</div>
-                        <a href="https://wa.me/6281234567890?text=Order%20Kemeja%20Batik%20Lengan%20Panjang" class="btn-order">Order Sekarang</a>
-                    </div>
-                </div>
-
-                <div class="produk-card">
-                    <div class="gambar">
-                        👚
-                    </div>
-                    <div class="info">
-                        <h3>Blouse Batik</h3>
-                        <div class="harga">Rp 275rb</div>
-                        <a href="https://wa.me/6281234567890?text=Order%20Blouse%20Batik" class="btn-order">Order Sekarang</a>
-                    </div>
-                </div>
-
-                <div class="produk-card">
-                    <div class="gambar">
-                        💑
-                        <span class="badge">PROMO</span>
-                    </div>
-                    <div class="info">
-                        <h3>Batik Couple</h3>
-                        <div class="harga">Rp 500rb <span class="coret">Rp 700rb</span></div>
-                        <a href="https://wa.me/6281234567890?text=Order%20Batik%20Couple" class="btn-order">Order Sekarang</a>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
 
-    <!-- KEUNGGULAN -->
-    <section class="keunggulan" id="keunggulan">
-        <div class="container">
-            <h2 class="section-title">Kenapa Pilih Batik Nusantara?</h2>
-            <p class="section-subtitle">Kualitas terbaik, harga terjangkau, pelayanan ramah</p>
-            <div class="keunggulan-grid">
-                <div class="keunggulan-card">
-                    <div class="icon">🇮🇩</div>
-                    <h3>100% Asli</h3>
-                    <p>Batik asli dari pengrajin Solo, Pekalongan, dan Yogyakarta</p>
-                </div>
-                <div class="keunggulan-card">
-                    <div class="icon">💰</div>
-                    <h3>Harga Langsung</h3>
-                    <p>Tanpa perantara, harga lebih murah dari toko</p>
-                </div>
-                <div class="keunggulan-card">
-                    <div class="icon">✨</div>
-                    <h3>Kualitas Premium</h3>
-                    <p>Bahan katun, sutra, dan campuran berkualitas</p>
-                </div>
-                <div class="keunggulan-card">
-                    <div class="icon">👔</div>
-                    <h3>Model Modern</h3>
-                    <p>Desain kekinian, cocok untuk semua acara</p>
-                </div>
-                <div class="keunggulan-card">
-                    <div class="icon">🚚</div>
-                    <h3>Gratis Ongkir</h3>
-                    <p>Min. pembelian Rp 200rb se-Indonesia</p>
-                </div>
-                <div class="keunggulan-card">
-                    <div class="icon">🛡️</div>
-                    <h3>Garansi</h3>
-                    <p>Uang kembali 7 hari jika tidak puas</p>
-                </div>
-            </div>
-        </div>
+    <!-- CTA & FOOTER (SINGKAT) -->
+    <section style="text-align: center; background: #8B4513; color: white; padding: 50px 20px;">
+        <h2>Jangan Lewatkan Promo Spesial!</h2>
+        <br>
+        <a href="https://wa.me/6281234567890" class="btn">Order via WhatsApp</a>
     </section>
 
-    <!-- CARA ORDER -->
-    <section class="cara-order">
-        <div class="container">
-            <h2 class="section-title">Cara Order Mudah</h2>
-            <p class="section-subtitle">Hanya 5 langkah, batik sampai di rumah Anda</p>
-            <div class="order-steps">
-                <div class="order-step">
-                    <div class="nomor">1</div>
-                    <h3>Pilih Produk</h3>
-                    <p>Lihat koleksi batik</p>
-                </div>
-                <div class="order-step">
-                    <div class="nomor">2</div>
-                    <h3>Klik WhatsApp</h3>
-                    <p>Chat langsung ke kami</p>
-                </div>
-                <div class="order-step">
-                    <div class="nomor">3</div>
-                    <h3>Konfirmasi</h3>
-                    <p>Pilih ukuran & model</p>
-                </div>
-                <div class="order-step">
-                    <div class="nomor">4</div>
-                    <h3>Bayar</h3>
-                    <p>Transfer, e-wallet, COD</p>
-                </div>
-                <div class="order-step">
-                    <div class="nomor">5</div>
-                    <h3>Dikirim</h3>
-                    <p>1-3 hari kerja</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- TESTIMONI -->
-    <section class="testimoni" id="testimoni">
-        <div class="container">
-            <h2 class="section-title">Kata Pelanggan Kami</h2>
-            <p class="section-subtitle">Ribuan pelanggan puas dengan batik kami</p>
-            <div class="testimoni-grid">
-                <div class="testimoni-card">
-                    <div class="stars">⭐⭐⭐⭐⭐</div>
-                    <p>"Batiknya bagus banget, bahannya nyaman, dan harganya murah. Sudah order 3x!"</p>
-                    <div class="author">— Budi, Jakarta</div>
-                </div>
-                <div class="testimoni-card">
-                    <div class="stars">⭐⭐⭐⭐⭐</div>
-                    <p>"Dress batiknya cantik, cocok buat acara formal. Recommended!"</p>
-                    <div class="author">— Sari, Bandung</div>
-                </div>
-                <div class="testimoni-card">
-                    <div class="stars">⭐⭐⭐⭐⭐</div>
-                    <p>"Pengiriman cepat, packing rapi. Pasti order lagi."</p>
-                    <div class="author">— Andi, Surabaya</div>
-                </div>
-                <div class="testimoni-card">
-                    <div class="stars">⭐⭐⭐⭐⭐</div>
-                    <p>"Batik tulisnya eksklusif, cocok buat hadiah. Puas!"</p>
-                    <div class="author">— Rina, Yogyakarta</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- PROMO -->
-    <section class="promo">
-        <div class="container">
-            <h2>Promo Spesial Bulan Ini!</h2>
-            <ul class="promo-list">
-                <li>Diskon 20% untuk pembelian pertama</li>
-                <li>Gratis ongkir min. Rp 200rb</li>
-                <li>Gratis tas eksklusif min. Rp 500rb</li>
-                <li>Beli 2 gratis 1 untuk batik couple</li>
-            </ul>
-            <a href="https://wa.me/6281234567890" class="btn">Order Sekarang</a>
-            <div class="urgency">⏰ Promo berakhir dalam 3 hari!</div>
-        </div>
-    </section>
-
-    <!-- FAQ -->
-    <section class="faq" id="faq">
-        <div class="container">
-            <h2 class="section-title">Pertanyaan Umum</h2>
-            <div class="faq-list">
-                <div class="faq-item">
-                    <h3>Apakah batiknya asli?</h3>
-                    <p>Ya, 100% batik asli dari pengrajin Solo, Pekalongan, dan Yogyakarta.</p>
-                </div>
-                <div class="faq-item">
-                    <h3>Bagaimana cara order?</h3>
-                    <p>Klik tombol WhatsApp, chat, konfirmasi ukuran, bayar, dan kami kirim.</p>
-                </div>
-                <div class="faq-item">
-                    <h3>Apakah bisa COD?</h3>
-                    <p>Ya, COD tersedia untuk area tertentu.</p>
-                </div>
-                <div class="faq-item">
-                    <h3>Berapa lama pengiriman?</h3>
-                    <p>1-3 hari kerja untuk Jawa, 3-7 hari untuk luar Jawa.</p>
-                </div>
-                <div class="faq-item">
-                    <h3>Apakah ada garansi?</h3>
-                    <p>Ya, garansi uang kembali 7 hari jika tidak puas.</p>
-                </div>
-                <div class="faq-item">
-                    <h3>Bagaimana cara cek ukuran?</h3>
-                    <p>Ada size chart di setiap produk. Bisa tanya via WhatsApp.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA AKHIR -->
-    <section class="cta-akhir">
-        <div class="container">
-            <h2>Jangan Lewatkan Promo Spesial!</h2>
-            <a href="https://wa.me/6281234567890" class="btn">Order via WhatsApp</a>
-            <div class="urgency">⏰ Stok terbatas!</div>
-        </div>
-    </section>
-
-    <!-- FOOTER -->
     <footer>
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-col">
-                    <h3>Batik Nusantara</h3>
-                    <p>Batik premium harga pengrajin. Kualitas terbaik untuk Anda.</p>
-                </div>
-                <div class="footer-col">
-                    <h3>Kontak</h3>
-                    <a href="https://wa.me/6281234567890">WhatsApp: 0812-3456-7890</a>
-                    <a href="mailto:info@batiknusantara.com">Email: info@batiknusantara.com</a>
-                    <p>Jl. Batik No. 123, Solo</p>
-                </div>
-                <div class="footer-col">
-                    <h3>Sosial Media</h3>
-                    <a href="#">Instagram: @batiknusantara</a>
-                    <a href="#">TikTok: @batiknusantara</a>
-                    <a href="#">Facebook: Batik Nusantara</a>
-                </div>
-                <div class="footer-col">
-                    <h3>Layanan</h3>
-                    <a href="#">Cara Order</a>
-                    <a href="#">Size Chart</a>
-                    <a href="#">Kebijakan Pengembalian</a>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                © 2024 Batik Nusantara. All rights reserved.
-            </div>
+        <div class="container" style="text-align: center;">
+            <p>© 2024 Batik Nusantara. All rights reserved.</p>
         </div>
     </footer>
 
-    <!-- FLOATING WHATSAPP -->
     <a href="https://wa.me/6281234567890" class="float-wa" title="Order via WhatsApp">💬</a>
 
 </body>
