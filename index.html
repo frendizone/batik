@@ -3,26 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Batik Nusantara - Koleksi Batik Premium</title>
+    <title>Batik Ayu - Koleksi Batik Wanita Premium</title>
     
-    <!-- Google Fonts: Playfair Display (Judul) & Poppins (Teks) -->
+    <!-- Google Fonts: Quicksand (Cute/Modern) & Playfair Display (Elegan) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,600&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
     
     <style>
         /* ================= VARIABEL WARNA ================= */
         :root {
-            --primary: #0F172A;      /* Navy Gelap (Profesional) */
-            --secondary: #C6A87C;    /* Emas/Krem (Elegan) */
-            --secondary-hover: #b09367;
+            --primary: #1A1A2E;      /* Navy Lembut */
+            --secondary: #E2B4BD;    /* Soft Pink (Cute) */
+            --secondary-hover: #d19aa5;
             --accent: #25D366;       /* WhatsApp Green */
-            --bg-light: #F8F9FA;     /* Background Terang */
+            --bg-light: #FDFBF7;     /* Putih Tulang / Krem (Elegan) */
             --bg-white: #FFFFFF;
-            --text-dark: #1E293B;
-            --text-muted: #64748B;
+            --text-dark: #2D3748;
+            --text-muted: #718096;
             --font-heading: 'Playfair Display', serif;
-            --font-body: 'Poppins', sans-serif;
+            --font-body: 'Quicksand', sans-serif;
         }
 
         /* ================= RESET & BASE ================= */
@@ -32,9 +32,7 @@
             box-sizing: border-box;
         }
 
-        html {
-            scroll-behavior: smooth;
-        }
+        html { scroll-behavior: smooth; }
 
         body {
             font-family: var(--font-body);
@@ -44,8 +42,9 @@
             -webkit-font-smoothing: antialiased;
         }
 
-        h1, h2, h3, .logo {
+        h1, h2, h3 {
             font-family: var(--font-heading);
+            font-weight: 600;
         }
 
         .container {
@@ -54,15 +53,15 @@
             padding: 0 24px;
         }
 
-        /* ================= NAVBAR ================= */
+        /* ================= NAVBAR & LOGO KONTEMPORER ================= */
         nav {
-            background: rgba(255, 255, 255, 0.98);
+            background: rgba(253, 251, 247, 0.95);
             backdrop-filter: blur(10px);
-            padding: 20px 0;
+            padding: 15px 0;
             position: sticky;
             top: 0;
             z-index: 100;
-            border-bottom: 1px solid rgba(0,0,0,0.05);
+            border-bottom: 1px solid rgba(0,0,0,0.03);
         }
 
         nav .container {
@@ -71,12 +70,31 @@
             align-items: center;
         }
 
-        nav .logo {
-            font-size: 26px;
-            font-weight: 700;
-            color: var(--primary);
-            letter-spacing: 0.5px;
+        /* Desain Logo SVG */
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
             text-decoration: none;
+            color: var(--primary);
+            transition: transform 0.3s ease;
+        }
+
+        .logo-container:hover {
+            transform: scale(1.02);
+        }
+
+        .logo-svg {
+            width: 40px;
+            height: 40px;
+        }
+
+        .logo-text {
+            font-family: var(--font-heading);
+            font-size: 24px;
+            font-weight: 600;
+            font-style: italic;
+            letter-spacing: 0.5px;
         }
 
         nav ul {
@@ -88,42 +106,45 @@
         nav ul li a {
             text-decoration: none;
             color: var(--text-dark);
-            font-weight: 500;
+            font-weight: 600;
             font-size: 15px;
             transition: color 0.3s;
         }
 
-        nav ul li a:hover {
-            color: var(--secondary);
+        nav ul li a:hover { color: var(--secondary-hover); }
+
+        .nav-icons {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            font-size: 20px;
         }
 
         /* ================= HERO SECTION ================= */
         .hero {
-            background-color: var(--primary);
-            /* Menggunakan gambar kain batik asli dari Unsplash sebagai background */
-            background-image: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.85)), url('https://images.unsplash.com/photo-1600080972464-8e5f35f63d08?q=80&w=1920&auto=format&fit=crop');
+            background-image: linear-gradient(rgba(253, 251, 247, 0.85), rgba(253, 251, 247, 0.95)), url('https://images.unsplash.com/photo-1613489022437-41b686f2cc53?q=80&w=1920&auto=format&fit=crop');
             background-size: cover;
             background-position: center;
-            color: white;
-            padding: 140px 20px;
+            padding: 120px 20px;
             text-align: center;
+            border-bottom: 1px solid rgba(0,0,0,0.03);
         }
 
         .hero h1 {
-            font-size: 54px;
+            font-size: 52px;
             margin-bottom: 24px;
             line-height: 1.2;
-            color: #ffffff;
+            color: var(--primary);
         }
 
         .hero p {
             font-size: 18px;
             margin-bottom: 40px;
-            font-weight: 300;
-            max-width: 650px;
+            font-weight: 500;
+            max-width: 600px;
             margin-left: auto;
             margin-right: auto;
-            opacity: 0.9;
+            color: var(--text-muted);
         }
 
         .btn-primary {
@@ -131,31 +152,29 @@
             background: var(--secondary);
             color: white;
             padding: 16px 40px;
-            border-radius: 4px;
+            border-radius: 50px;
             text-decoration: none;
             font-size: 16px;
-            font-weight: 600;
-            letter-spacing: 1px;
-            text-transform: uppercase;
+            font-weight: 700;
             transition: all 0.3s ease;
             border: none;
             cursor: pointer;
+            box-shadow: 0 8px 20px rgba(226, 180, 189, 0.4);
         }
 
         .btn-primary:hover {
             background: var(--secondary-hover);
-            transform: translateY(-2px);
-            box-shadow: 0 10px 20px rgba(198, 168, 124, 0.3);
+            transform: translateY(-3px);
+            box-shadow: 0 12px 25px rgba(226, 180, 189, 0.6);
         }
 
-        /* ================= TRUST BAR ================= */
-        .trust-bar {
+        /* ================= FITUR (BENEFITS) ================= */
+        .benefits {
             background: var(--bg-white);
-            padding: 25px 0;
-            border-bottom: 1px solid rgba(0,0,0,0.05);
+            padding: 30px 0;
         }
 
-        .trust-grid {
+        .benefits-grid {
             display: flex;
             justify-content: space-around;
             flex-wrap: wrap;
@@ -163,24 +182,20 @@
             text-align: center;
         }
 
-        .trust-item {
+        .benefit-item {
             display: flex;
             align-items: center;
             gap: 12px;
             font-size: 14px;
-            font-weight: 500;
-            color: var(--text-muted);
+            font-weight: 600;
+            color: var(--text-dark);
         }
+        .benefit-item span { font-size: 24px; }
 
-        /* ================= KOLEKSI SECTION ================= */
-        section {
-            padding: 100px 0;
-        }
+        /* ================= KOLEKSI PRODUK ================= */
+        section { padding: 100px 0; }
 
-        .section-header {
-            text-align: center;
-            margin-bottom: 60px;
-        }
+        .section-header { text-align: center; margin-bottom: 60px; }
 
         .section-title {
             font-size: 40px;
@@ -191,59 +206,58 @@
         .section-subtitle {
             font-size: 16px;
             color: var(--text-muted);
-            font-weight: 300;
         }
 
         .produk-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 40px;
         }
 
         .produk-card {
             background: var(--bg-white);
-            border-radius: 12px;
+            border-radius: 20px;
             overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
         }
 
         .produk-card:hover {
             transform: translateY(-8px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.08);
         }
 
         .produk-image {
             width: 100%;
-            height: 380px;
+            height: 350px;
             position: relative;
             overflow: hidden;
-            background-color: #eee;
+            background-color: #f7f7f7;
         }
 
         .produk-image img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            transition: transform 0.6s ease;
+            transition: transform 0.5s ease;
         }
 
         .produk-card:hover .produk-image img {
-            transform: scale(1.08);
+            transform: scale(1.05);
         }
 
         .badge {
             position: absolute;
             top: 16px;
-            left: 16px;
+            right: 16px;
             background: var(--secondary);
             color: white;
-            padding: 6px 14px;
-            border-radius: 4px;
+            padding: 8px 16px;
+            border-radius: 20px;
             font-size: 12px;
-            font-weight: 600;
-            letter-spacing: 1px;
-            text-transform: uppercase;
+            font-weight: 700;
+            letter-spacing: 0.5px;
             z-index: 10;
         }
 
@@ -253,15 +267,15 @@
         }
 
         .produk-info h3 {
-            font-size: 22px;
+            font-size: 20px;
             margin-bottom: 8px;
             color: var(--primary);
         }
 
         .produk-price {
             font-size: 18px;
-            font-weight: 600;
-            color: var(--text-muted);
+            font-weight: 700;
+            color: var(--secondary-hover);
             margin-bottom: 20px;
         }
 
@@ -270,60 +284,76 @@
             color: #a0a0a0;
             text-decoration: line-through;
             margin-left: 8px;
-            font-weight: 400;
+            font-weight: 500;
         }
 
-        .btn-order {
+        .btn-add-cart {
             display: block;
             width: 100%;
-            background: var(--primary);
-            color: white;
+            background: var(--bg-light);
+            color: var(--primary);
+            border: 2px solid var(--secondary);
             padding: 14px;
-            border-radius: 6px;
+            border-radius: 30px;
             text-decoration: none;
-            font-weight: 500;
+            font-weight: 700;
             font-size: 15px;
-            transition: background 0.3s;
+            transition: all 0.3s;
         }
 
-        .btn-order:hover {
-            background: #0b111e;
+        .btn-add-cart:hover {
+            background: var(--secondary);
+            color: white;
         }
 
         /* ================= CTA SECTION ================= */
         .cta-section {
-            background: var(--secondary);
+            background: var(--primary);
             color: white;
             text-align: center;
             padding: 80px 20px;
+            border-radius: 40px 40px 0 0;
         }
 
         .cta-section h2 {
             font-size: 36px;
             margin-bottom: 20px;
-            color: white;
+            color: var(--secondary);
         }
 
         .cta-section p {
             margin-bottom: 30px;
-            font-size: 18px;
+            font-size: 16px;
+            color: #ccc;
         }
 
-        .cta-section .btn-primary {
-            background: var(--primary);
-        }
-
-        .cta-section .btn-primary:hover {
-            background: #0b111e;
-        }
-
-        /* ================= FOOTER ================= */
+        /* ================= FOOTER & LOGO FOOTER ================= */
         footer {
             background: var(--primary);
-            color: #94A3B8;
+            color: #a0a0a0;
             padding: 40px 20px;
             text-align: center;
             font-size: 14px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .footer-logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 15px;
+            color: white;
+        }
+
+        .footer-logo .logo-svg {
+            width: 30px;
+            height: 30px;
+        }
+
+        .footer-logo .logo-text {
+            font-size: 20px;
+            color: var(--secondary);
         }
 
         /* ================= FLOATING WHATSAPP ================= */
@@ -355,7 +385,7 @@
             nav ul { display: none; }
             .hero h1 { font-size: 36px; }
             .section-title { font-size: 32px; }
-            .trust-grid { flex-direction: column; align-items: center; gap: 15px; }
+            .benefits-grid { flex-direction: column; align-items: flex-start; padding-left: 20px; }
             .produk-image { height: 300px; }
         }
     </style>
@@ -365,84 +395,96 @@
     <!-- NAVBAR -->
     <nav>
         <div class="container">
-            <a href="#" class="logo">Batik Nusantara</a>
+            <!-- LOGO KONTEMPORER (SVG) -->
+            <a href="#" class="logo-container">
+                <svg class="logo-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Bentuk kelopak modern -->
+                    <path d="M50 10 C 70 30, 90 50, 50 90 C 10 50, 30 30, 50 10 Z" fill="#E2B4BD"/>
+                    <!-- Huruf B elegan di tengah -->
+                    <path d="M42 35 V 65 H 55 C 62 65, 65 61, 65 55 C 65 48, 60 45, 55 45 C 60 45, 62 42, 62 38 C 62 32, 58 35, 52 35 H 42 Z M 48 40 H 52 C 54 40, 56 41, 56 43 C 56 45, 54 45, 52 45 H 48 V 40 Z M 48 50 H 53 C 57 50, 59 51, 59 54 C 59 57, 56 59, 53 59 H 48 V 50 Z" fill="#1A1A2E"/>
+                </svg>
+                <span class="logo-text">Batik Ayu</span>
+            </a>
+
             <ul>
-                <li><a href="#koleksi">Koleksi</a></li>
+                <li><a href="#koleksi">Koleksi Terbaru</a></li>
                 <li><a href="#tentang">Tentang Kami</a></li>
-                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#faq">Bantuan</a></li>
             </ul>
-            <!-- Ganti 6281234567890 dengan nomor WA Anda -->
-            <a href="https://wa.me/6281234567890" class="btn-order" style="width: auto; padding: 10px 24px; border-radius: 50px;">Hubungi Kami</a>
+            <div class="nav-icons">
+                <span style="cursor:pointer;">🔍</span>
+                <span style="cursor:pointer;">🛒</span>
+            </div>
         </div>
     </nav>
 
     <!-- HERO SECTION -->
     <section class="hero">
         <div class="container">
-            <h1>Warisan Budaya dalam Balutan Modernitas</h1>
-            <p>Temukan koleksi batik premium dengan kualitas kain terbaik. Dirancang untuk kenyamanan dan gaya profesional Anda.</p>
-            <a href="#koleksi" class="btn-primary">Lihat Koleksi</a>
+            <h1>Pesona Batik untuk Wanita Modern</h1>
+            <p>Koleksi batik eksklusif dengan bahan premium yang super nyaman. Tampil anggun, tetap stylish untuk segala acara.</p>
+            <a href="#koleksi" class="btn-primary">Belanja Sekarang</a>
         </div>
     </section>
 
-    <!-- TRUST BAR -->
-    <div class="trust-bar">
+    <!-- BENEFITS -->
+    <div class="benefits">
         <div class="container">
-            <div class="trust-grid">
-                <div class="trust-item">⭐ 4.9/5 Rating Pelanggan</div>
-                <div class="trust-item">🇮🇩 100% Batik Asli Indonesia</div>
-                <div class="trust-item">🚚 Gratis Ongkir Seluruh Indonesia</div>
+            <div class="benefits-grid">
+                <div class="benefit-item"><span>🌸</span> Bahan Premium & Adem</div>
+                <div class="benefit-item"><span>✨</span> Desain Eksklusif</div>
+                <div class="benefit-item"><span>🚚</span> Gratis Ongkir Min. 200rb</div>
+                <div class="benefit-item"><span>💖</span> 5.000+ Pelanggan Puas</div>
             </div>
         </div>
     </div>
 
-    <!-- KOLEKSI SECTION -->
+    <!-- KOLEKSI PRODUK -->
     <section id="koleksi">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Koleksi Pilihan</h2>
-                <p class="section-subtitle">Kualitas eksklusif dengan harga langsung dari pengrajin</p>
+                <h2 class="section-title">Koleksi Favorit</h2>
+                <p class="section-subtitle">Pilih gaya favoritmu dan jadilah pusat perhatian</p>
             </div>
             
             <div class="produk-grid">
                 
-                <!-- PRODUK 1 (Gambar Real HD: Kemeja Batik) -->
+                <!-- PRODUK 1 -->
                 <div class="produk-card">
                     <div class="produk-image">
-                        <img src="https://images.unsplash.com/photo-1596808228872-19583e808f22?q=80&w=800&auto=format&fit=crop" alt="Kemeja Batik Pria">
+                        <img src="https://images.unsplash.com/photo-1613489022437-41b686f2cc53?q=80&w=800&auto=format&fit=crop" alt="Dress Batik Modern">
                         <span class="badge">Best Seller</span>
                     </div>
                     <div class="produk-info">
-                        <h3>Kemeja Batik Pria</h3>
-                        <div class="produk-price">Rp 250.000 <span class="coret">Rp 350.000</span></div>
-                        <!-- Ganti teks setelah ?text= untuk pesan otomatis -->
-                        <a href="https://wa.me/6281234567890?text=Halo,%20saya%20mau%20order%20Kemeja%20Batik%20Pria" class="btn-order">Beli Sekarang</a>
+                        <h3>Dress Batik Modern</h3>
+                        <div class="produk-price">Rp 350.000 <span class="coret">Rp 450.000</span></div>
+                        <a href="https://wa.me/6281234567890?text=Halo,%20saya%20mau%20order%20Dress%20Batik%20Modern" class="btn-add-cart">+ Keranjang</a>
                     </div>
                 </div>
 
-                <!-- PRODUK 2 (Gambar Real HD: Dress Batik Wanita) -->
+                <!-- PRODUK 2 -->
                 <div class="produk-card">
                     <div class="produk-image">
-                        <img src="https://images.unsplash.com/photo-1613489022437-41b686f2cc53?q=80&w=800&auto=format&fit=crop" alt="Dress Batik Wanita">
-                        <span class="badge">Koleksi Baru</span>
+                        <img src="https://images.unsplash.com/photo-1596808228872-19583e808f22?q=80&w=800&auto=format&fit=crop" alt="Kemeja Batik Wanita">
+                        <span class="badge">New Arrival</span>
                     </div>
                     <div class="produk-info">
-                        <h3>Dress Batik Wanita</h3>
-                        <div class="produk-price">Rp 350.000 <span class="coret">Rp 450.000</span></div>
-                        <a href="https://wa.me/6281234567890?text=Halo,%20saya%20mau%20order%20Dress%20Batik%20Wanita" class="btn-order">Beli Sekarang</a>
+                        <h3>Kemeja Batik Casual</h3>
+                        <div class="produk-price">Rp 250.000</div>
+                        <a href="https://wa.me/6281234567890?text=Halo,%20saya%20mau%20order%20Kemeja%20Batik%20Casual" class="btn-add-cart">+ Keranjang</a>
                     </div>
                 </div>
 
-                <!-- PRODUK 3 (Gambar Real HD: Kain Batik) -->
+                <!-- PRODUK 3 -->
                 <div class="produk-card">
                     <div class="produk-image">
-                        <img src="https://images.unsplash.com/photo-1600080972464-8e5f35f63d08?q=80&w=800&auto=format&fit=crop" alt="Kain Batik Tulis">
+                        <img src="https://images.unsplash.com/photo-1600080972464-8e5f35f63d08?q=80&w=800&auto=format&fit=crop" alt="Kain Batik Premium">
                         <span class="badge">Premium</span>
                     </div>
                     <div class="produk-info">
                         <h3>Kain Batik Tulis</h3>
                         <div class="produk-price">Rp 750.000</div>
-                        <a href="https://wa.me/6281234567890?text=Halo,%20saya%20mau%20order%20Kain%20Batik%20Tulis" class="btn-order">Beli Sekarang</a>
+                        <a href="https://wa.me/6281234567890?text=Halo,%20saya%20mau%20order%20Kain%20Batik%20Tulis" class="btn-add-cart">+ Keranjang</a>
                     </div>
                 </div>
 
@@ -453,8 +495,8 @@
     <!-- CTA SECTION -->
     <section class="cta-section">
         <div class="container">
-            <h2>Dapatkan Penawaran Spesial Hari Ini</h2>
-            <p>Diskon 20% untuk pembelian pertama Anda. Hubungi kami sekarang.</p>
+            <h2>Diskon 20% Untuk Pembelian Pertama!</h2>
+            <p>Jangan lewatkan kesempatan tampil cantik dengan batik premium kami.</p>
             <a href="https://wa.me/6281234567890" class="btn-primary">Chat via WhatsApp</a>
         </div>
     </section>
@@ -462,7 +504,15 @@
     <!-- FOOTER -->
     <footer>
         <div class="container">
-            <p>&copy; 2026 Batik Nusantara. All rights reserved.</p>
+            <!-- LOGO FOOTER -->
+            <div class="footer-logo">
+                <svg class="logo-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M50 10 C 70 30, 90 50, 50 90 C 10 50, 30 30, 50 10 Z" fill="#E2B4BD"/>
+                    <path d="M42 35 V 65 H 55 C 62 65, 65 61, 65 55 C 65 48, 60 45, 55 45 C 60 45, 62 42, 62 38 C 62 32, 58 35, 52 35 H 42 Z M 48 40 H 52 C 54 40, 56 41, 56 43 C 56 45, 54 45, 52 45 H 48 V 40 Z M 48 50 H 53 C 57 50, 59 51, 59 54 C 59 57, 56 59, 53 59 H 48 V 50 Z" fill="#1A1A2E"/>
+                </svg>
+                <span class="logo-text">Batik Ayu</span>
+            </div>
+            <p>&copy; 2026 Batik Ayu. All rights reserved.</p>
         </div>
     </footer>
 
