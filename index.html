@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Batik Ayu - Elegansi Kontemporer</title>
+    <title>Batik Ayu - Koleksi Eksklusif</title>
     
     <!-- Google Fonts: Playfair Display (Elegan) & Plus Jakarta Sans (Modern) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,16 +11,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     
     <style>
-        /* ================= VARIABEL WARNA (FULL COLOR) ================= */
+        /* ================= VARIABEL WARNA (RED & YELLOW GRADIENT) ================= */
         :root {
-            --primary: #0A3A2A;      /* Deep Emerald Green (Mewah) */
-            --secondary: #E58A7A;    /* Rose Gold / Peach (Feminin) */
-            --secondary-hover: #D17767;
+            --primary: #B91C1C;      /* Merah Crimson (Berani & Elegan) */
+            --primary-dark: #7F1D1D; /* Merah Gelap */
+            --secondary: #F59E0B;    /* Kuning Amber (Cerah) */
+            --secondary-light: #FCD34D;
             --accent: #25D366;       /* WhatsApp Green */
-            --bg-light: #FAFAFA;     /* Background terang bersih */
+            --bg-light: #FFFBEB;     /* Background Krem Sangat Muda */
             --bg-white: #FFFFFF;
-            --text-dark: #1A1A1A;
-            --text-muted: #6B7280;
+            --text-dark: #27272A;
+            --text-muted: #71717A;
             --font-heading: 'Playfair Display', serif;
             --font-body: 'Plus Jakarta Sans', sans-serif;
         }
@@ -46,7 +47,7 @@
         h1, h2, h3 {
             font-family: var(--font-heading);
             font-weight: 700;
-            color: var(--primary);
+            color: var(--primary-dark);
         }
 
         .container {
@@ -55,7 +56,7 @@
             padding: 0 24px;
         }
 
-        /* ================= NAVBAR & LOGO KONTEMPORER ================= */
+        /* ================= NAVBAR & LOGO ================= */
         nav {
             background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(12px);
@@ -63,7 +64,7 @@
             position: sticky;
             top: 0;
             z-index: 100;
-            border-bottom: 1px solid rgba(0,0,0,0.04);
+            border-bottom: 1px solid rgba(185, 28, 28, 0.1);
         }
 
         nav .container {
@@ -72,7 +73,6 @@
             align-items: center;
         }
 
-        /* Desain Logo Kontemporer */
         .logo-container {
             display: flex;
             align-items: center;
@@ -125,7 +125,7 @@
             transition: width 0.3s ease;
         }
 
-        nav ul li a:hover { color: var(--secondary); }
+        nav ul li a:hover { color: var(--primary); }
         nav ul li a:hover::after { width: 100%; }
 
         .nav-icons {
@@ -139,15 +139,33 @@
         .nav-icons span { cursor: pointer; transition: color 0.3s; }
         .nav-icons span:hover { color: var(--secondary); }
 
-        /* ================= HERO SECTION ================= */
+        /* ================= HERO SECTION (GRADASI MERAH-KUNING) ================= */
         .hero {
-            background-color: var(--primary);
-            background-image: linear-gradient(rgba(10, 58, 42, 0.85), rgba(10, 58, 42, 0.95)), url('https://images.unsplash.com/photo-1613489022437-41b686f2cc53?q=80&w=1920&auto=format&fit=crop');
-            background-size: cover;
-            background-position: center;
+            /* Perpaduan background merah gelap ke arah kuning kecoklatan */
+            background: linear-gradient(135deg, #991B1B 0%, #D97706 100%);
             padding: 140px 20px;
             text-align: center;
             color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Ornamen lingkaran agar lebih modern */
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -10%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(252, 211, 77, 0.2) 0%, transparent 70%);
+            border-radius: 50%;
+            z-index: 0;
+        }
+
+        .hero .container {
+            position: relative;
+            z-index: 1;
         }
 
         .hero h1 {
@@ -155,44 +173,45 @@
             margin-bottom: 24px;
             line-height: 1.1;
             color: #FFFFFF;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
         }
 
         .hero p {
             font-size: 18px;
             margin-bottom: 40px;
-            font-weight: 400;
+            font-weight: 500;
             max-width: 600px;
             margin-left: auto;
             margin-right: auto;
-            color: #E2E8F0;
+            color: #FEF3C7;
         }
 
         .btn-primary {
             display: inline-block;
             background: var(--secondary);
-            color: white;
+            color: var(--primary-dark);
             padding: 18px 48px;
             border-radius: 50px;
             text-decoration: none;
             font-size: 16px;
-            font-weight: 700;
+            font-weight: 800;
             transition: all 0.3s ease;
             border: none;
             cursor: pointer;
-            box-shadow: 0 8px 25px rgba(229, 138, 122, 0.4);
+            box-shadow: 0 8px 25px rgba(245, 158, 11, 0.4);
         }
 
         .btn-primary:hover {
-            background: var(--secondary-hover);
+            background: var(--secondary-light);
             transform: translateY(-3px);
-            box-shadow: 0 12px 30px rgba(229, 138, 122, 0.6);
+            box-shadow: 0 12px 30px rgba(245, 158, 11, 0.6);
         }
 
         /* ================= FITUR (BENEFITS) ================= */
         .benefits {
             background: var(--bg-white);
             padding: 30px 0;
-            border-bottom: 1px solid rgba(0,0,0,0.03);
+            border-bottom: 2px solid var(--bg-light);
         }
 
         .benefits-grid {
@@ -208,7 +227,7 @@
             align-items: center;
             gap: 12px;
             font-size: 14px;
-            font-weight: 600;
+            font-weight: 700;
             color: var(--primary);
         }
         .benefit-item span { font-size: 24px; }
@@ -239,14 +258,14 @@
             background: var(--bg-white);
             border-radius: 24px;
             overflow: hidden;
-            box-shadow: 0 10px 35px rgba(0,0,0,0.05);
+            box-shadow: 0 10px 35px rgba(185, 28, 28, 0.08);
             transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
             position: relative;
         }
 
         .produk-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 20px 45px rgba(0,0,0,0.1);
+            box-shadow: 0 20px 45px rgba(245, 158, 11, 0.2);
         }
 
         .produk-image {
@@ -268,19 +287,20 @@
             transform: scale(1.08);
         }
 
+        /* Badge dengan Gradasi Kuning */
         .badge {
             position: absolute;
             top: 16px;
             right: 16px;
-            background: var(--secondary);
-            color: white;
+            background: linear-gradient(135deg, #F59E0B 0%, #FCD34D 100%);
+            color: var(--primary-dark);
             padding: 8px 18px;
             border-radius: 30px;
             font-size: 12px;
-            font-weight: 700;
+            font-weight: 800;
             letter-spacing: 0.5px;
             z-index: 10;
-            box-shadow: 0 4px 10px rgba(229, 138, 122, 0.3);
+            box-shadow: 0 4px 10px rgba(245, 158, 11, 0.4);
         }
 
         .produk-info {
@@ -291,13 +311,13 @@
         .produk-info h3 {
             font-size: 22px;
             margin-bottom: 8px;
-            color: var(--primary);
+            color: var(--primary-dark);
         }
 
         .produk-price {
             font-size: 18px;
-            font-weight: 700;
-            color: var(--secondary);
+            font-weight: 800;
+            color: var(--primary);
             margin-bottom: 24px;
         }
 
@@ -309,6 +329,7 @@
             font-weight: 500;
         }
 
+        /* Tombol Keranjang */
         .btn-add-cart {
             display: block;
             width: 100%;
@@ -318,7 +339,7 @@
             padding: 14px;
             border-radius: 50px;
             text-decoration: none;
-            font-weight: 700;
+            font-weight: 800;
             font-size: 15px;
             transition: all 0.3s;
         }
@@ -326,12 +347,13 @@
         .btn-add-cart:hover {
             background: var(--primary);
             color: white;
+            box-shadow: 0 4px 15px rgba(185, 28, 28, 0.3);
         }
 
         /* ================= CTA SECTION ================= */
         .cta-section {
-            background: var(--secondary);
-            color: white;
+            background: linear-gradient(135deg, #F59E0B 0%, #FCD34D 100%);
+            color: var(--primary-dark);
             text-align: center;
             padding: 90px 20px;
             border-radius: 40px 40px 0 0;
@@ -340,29 +362,31 @@
         .cta-section h2 {
             font-size: 38px;
             margin-bottom: 20px;
-            color: white;
+            color: var(--primary-dark);
         }
 
         .cta-section p {
             margin-bottom: 30px;
-            font-size: 16px;
-            color: rgba(255,255,255,0.9);
+            font-size: 18px;
+            font-weight: 600;
+            color: #78350F;
         }
 
         .cta-section .btn-primary {
             background: var(--primary);
-            box-shadow: 0 8px 25px rgba(10, 58, 42, 0.3);
+            color: white;
+            box-shadow: 0 8px 25px rgba(185, 28, 28, 0.4);
         }
 
         .cta-section .btn-primary:hover {
-            background: #052318;
-            box-shadow: 0 12px 30px rgba(10, 58, 42, 0.5);
+            background: var(--primary-dark);
+            box-shadow: 0 12px 30px rgba(185, 28, 28, 0.6);
         }
 
-        /* ================= FOOTER & LOGO FOOTER ================= */
+        /* ================= FOOTER ================= */
         footer {
-            background: var(--primary);
-            color: #A0AAB2;
+            background: var(--primary-dark);
+            color: #FDE68A;
             padding: 50px 20px 30px;
             text-align: center;
             font-size: 14px;
@@ -384,7 +408,7 @@
 
         .footer-logo .logo-text {
             font-size: 22px;
-            color: white;
+            color: var(--secondary-light);
         }
 
         /* ================= FLOATING WHATSAPP ================= */
@@ -427,13 +451,13 @@
     <!-- NAVBAR -->
     <nav>
         <div class="container">
-            <!-- LOGO KONTEMPORER FULL COLOR -->
+            <!-- LOGO KONTEMPORER (MERAH & KUNING) -->
             <a href="#" class="logo-container">
                 <svg class="logo-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
                     <!-- Bentuk Geometris Kontemporer (Berlian) -->
-                    <polygon points="50,5 95,50 50,95 5,50" fill="#E58A7A"/>
-                    <polygon points="50,20 80,50 50,80 20,50" fill="#0A3A2A"/>
-                    <circle cx="50" cy="50" r="12" fill="#E58A7A"/>
+                    <polygon points="50,5 95,50 50,95 5,50" fill="#B91C1C"/>
+                    <polygon points="50,20 80,50 50,80 20,50" fill="#FCD34D"/>
+                    <circle cx="50" cy="50" r="12" fill="#B91C1C"/>
                 </svg>
                 <span class="logo-text">Batik Ayu</span>
             </a>
@@ -484,7 +508,7 @@
                 <!-- PRODUK 1 -->
                 <div class="produk-card">
                     <div class="produk-image">
-                        <img src="https://images.unsplash.com/photo-1613489022437-41b686f2cc53?q=80&w=800&auto=format&fit=crop" alt="Dress Batik Modern">
+                        <img src="img/dressbatik.jpg" alt="Dress Batik Modern">
                         <span class="badge">Best Seller</span>
                     </div>
                     <div class="produk-info">
@@ -497,7 +521,7 @@
                 <!-- PRODUK 2 -->
                 <div class="produk-card">
                     <div class="produk-image">
-                        <img src="https://images.unsplash.com/photo-1596808228872-19583e808f22?q=80&w=800&auto=format&fit=crop" alt="Kemeja Batik Wanita">
+                        <img src="img/kemejabatikcasual.jpg" alt="Kemeja Batik Wanita">
                         <span class="badge">New Arrival</span>
                     </div>
                     <div class="produk-info">
@@ -510,7 +534,7 @@
                 <!-- PRODUK 3 -->
                 <div class="produk-card">
                     <div class="produk-image">
-                        <img src="https://images.unsplash.com/photo-1600080972464-8e5f35f63d08?q=80&w=800&auto=format&fit=crop" alt="Kain Batik Premium">
+                        <img src="img/kanbatik.jpg" alt="Kain Batik Premium">
                         <span class="badge">Premium</span>
                     </div>
                     <div class="produk-info">
@@ -536,16 +560,16 @@
     <!-- FOOTER -->
     <footer>
         <div class="container">
-            <!-- LOGO FOOTER FULL COLOR -->
+            <!-- LOGO FOOTER -->
             <div class="footer-logo">
                 <svg class="logo-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                    <polygon points="50,5 95,50 50,95 5,50" fill="#E58A7A"/>
-                    <polygon points="50,20 80,50 50,80 20,50" fill="#FFFFFF"/>
-                    <circle cx="50" cy="50" r="12" fill="#E58A7A"/>
+                    <polygon points="50,5 95,50 50,95 5,50" fill="#FCD34D"/>
+                    <polygon points="50,20 80,50 50,80 20,50" fill="#B91C1C"/>
+                    <circle cx="50" cy="50" r="12" fill="#FCD34D"/>
                 </svg>
                 <span class="logo-text">Batik Ayu</span>
             </div>
-            <p>&copy; 2024 Batik Ayu. All rights reserved.</p>
+            <p>&copy; 2026 Batik Ayu. All rights reserved.</p>
         </div>
     </footer>
 
